@@ -1,12 +1,6 @@
 #!/bin/bash
 script_info="iBeacon RSSI logger v1.0"
 echo $script_info
-#echo "Enter the beacon file name containing distance from the gateway, e.g: rssi1m [ENTER]"
-#read user_data
-#echo "You typed $user_data"
-#output_file_top="rssi"
-#output_file_bottom=".csv"
-#output_file_name="$user_data$output_file_bottom"
 output_file_name="rssi_4m.csv"
 echo "$output_file_name"
 echo "Getting beacon RSSI"
@@ -41,7 +35,6 @@ if [[ $1 == "parse" ]]; then
 	    echo "$UUID $MAJOR $MINOR $POWER" 
           else
     	    #echo "UUID: $UUID MAJOR: $MAJOR MINOR: $MINOR POWER: $POWER RSSI: $RSSI"
-			#echo "UUID: $UUID RSSI: $RSSI"
     	    echo "UUID: $UUID RSSI: $RSSI" | tee -a $output_file_name
           fi
         fi
