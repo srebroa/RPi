@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Running Motion!"
+#modprobe bcm2835-v412
+motion -n -c /home/pi/motion/motion.conf #1>/dev/null 2>&1 </dev/null &
+
