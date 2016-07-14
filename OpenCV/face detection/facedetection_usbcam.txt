@@ -1,0 +1,4 @@
+- This program detects a face if it is in frontal position - USB camera version!
+- Program was tested on RPi3 with Logitech C920 webcam
+- Run the program:
+python facedetection_usbcam.py haarcascade_frontalface_default.xml
